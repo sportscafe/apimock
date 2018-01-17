@@ -9,8 +9,12 @@
   "author": "Gaurav Konar",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.0",
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
-    "hapi": "^17.2.0"
+    "csvjson": "^5.0.0",
+    "csvtojson": "^1.1.9",
+    "hapi": "^17.2.0",
+    "hapi-response-time": "^1.1.2"
   }
 }

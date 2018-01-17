@@ -1,4 +1,4 @@
 export let hello = (request, h) => {
-  return 'Hello, world';
+  let msg = request.query.name == undefined ? 'world' : request.query.name;
+  return 'Hello, ' + msg;
 };
-
