@@ -127,9 +127,10 @@ Modify ONLY and only the handler `loop` to get the expected response. Do not mak
    
  7. Write an api / function using JS in Atmost 1000 lines, To show your coding capabilities.
     and an explanation of 
-    	1. The input
-	2. The output
-        3. why that api / function is impressive.
+    
+    1. The input
+    2. The output
+    3. why that api / function is impressive.
     
     Not the input and output can be anything, there are no restrictions
     
