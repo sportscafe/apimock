@@ -14,11 +14,7 @@ Steps to perform:
 
 2. Debug the errors which are causing the server to crash at initialization.
 
-3. Modify the Api endpoint `/hello` to accept an optional query such that
-	* if `/hello` is queried, response is `Hello, World`
-	* if `/hello?name=harish` is queried, response is `Hello, Harish`
-
-4. Create an api endpoint in `src/api/prodapis/handlers.js` called `/csv2json` which accepts a csv file as an input and then sends a json object as response.
+3. Create an api endpoint in `src/api/prodapis/handlers.js` called `/csv2json` which accepts a csv file as an input and then sends a json object as response.
 	For eg:
 		
         Payload:
@@ -50,7 +46,7 @@ Steps to perform:
         	}
         ]
 
-5. Api endpoint `/loop` processes an array and is supposed to reply the output of function `adder`, when the array is serially processed through it. Function `adder` might seem to be performing an overcomplicated addition, but assume it to be a proxy for any asynchronous operation.
+4. Api endpoint `/loop` processes an array and is supposed to reply the output of function `adder`, when the array is serially processed through it. Function `adder` might seem to be performing an overcomplicated addition, but assume it to be a proxy for any asynchronous operation.
 
 We are currently passing an array `[1,2,3,4,5,6,7,8,9,10]` to the function adder. Calling this api will currently give you:
 
@@ -107,7 +103,7 @@ Current sum is 55
 
 Modify ONLY and only the handler `loop` to get the expected response. Do not make any changes to `function adder`. I am interested in receving both the correct response as well as the correct logging on console (showing perfectly that the operation is happening serially, and not parallely). The actual step of addition needs to be performed using `function adder`, and not bypassing it by any means.
 
-6. Create an api GET /dynamicdelay , the response of the api should be 
+5. Create an api GET /dynamicdelay , the response of the api should be 
    2 for the first request from an ip, 
    4 for the second request,
    8 for the third request and so on.
@@ -125,7 +121,51 @@ Modify ONLY and only the handler `loop` to get the expected response. Do not mak
    1. when its used by thousands of clients.
    2. when a single client calls the api concurrently.
    
- 7. Write an api / function using JS in Atmost 1000 lines, To show your coding capabilities.
+6. You have three Parameters: 
+    wallet_balance,
+    number_of_deposits
+    depositted_users
+
+  You have an excel sheet attached with the question where the values of the params
+  are given with user ids. 
+
+  NOTE : The excel has limited records. While completing the tasks, consider it is being used by millions of users. Try   making it as scalable, dynamic, optimized as possible. 
+
+Task 1:  
+   Make a system where we can easily store data using the columns mentioned in the
+Excel.
+Make Sure (GET, POST, PUT, DELETE) operations are fast.
+The given data set has data for 20 users. Consider these operations are happening for  ~ 1 million users.
+    
+Give us particular api points which can be used to (GET, POST, PUT, DELETE) data from the system.
+      
+
+Task 2:
+Design the system in such a way that using the parameters mentioned below  -> (wallet_balance,number_of_deposits, depositted_users)
+& with some specific operators ( “AND”, “OR”, “>”, “<”, “=” ).
+I can make any number /type dynamic queries with provided parameters and operators
+
+CONDITION CAN BE LIKE - 
+Deposited users  and whose wallet balance is greater than 30
+Users who have not deposited but have wallet_balance > certain amount.
+ETC….
+
+Note: Request can not contain anything other than the operators and parameters.
+You can use the operators and parameters in any order. Your api should automatically work if new operators and params are added
+
+
+
+HINT: 
+ Input should contain one user_id and the query
+Expected output: 
+true/false(boolean)
+
+If output is true that means the user id in request satisfies the condition and vice versa
+
+
+
+   
+ Bonus: Write an api / function using JS in Atmost 1000 lines, To show your coding capabilities.
     and an explanation of 
     
     1. The input
@@ -133,12 +173,7 @@ Modify ONLY and only the handler `loop` to get the expected response. Do not mak
     3. why that api / function is impressive.
     
     Not the input and output can be anything, there are no restrictions
-    
-BONUS Question:
-
-Print on console every api call made, along with the response time (in milliseconds) of the API. The log should have the format:
-```method=get, path=/loop, responseTimeMs=124, statusCode=200```
-Measure response time as the best approximation of the time between server receiving a request and replying to it.
+ 
 
 
 Tip:
