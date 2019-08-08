@@ -126,37 +126,30 @@ Modify ONLY and only the handler `loop` to get the expected response. Do not mak
     number_of_deposits
     depositted_users
 
-  You have an excel sheet attached with the question where the values of the params
-  are given with user ids. 
+You have an excel sheet attached with the question where the values of the params are given with user ids. 
 
-  NOTE : The excel has limited records. While completing the tasks, consider it is being used by millions of users. Try   making it as scalable, dynamic, optimized as possible. 
+NOTE : The excel has limited records. While completing the tasks, consider it is being used by millions of users. Try   making it as scalable, dynamic, optimized as possible. 
 
-Task 1:  
-   Make a system where we can easily store data using the columns mentioned in the
-Excel.
-Make Sure (GET, POST, PUT, DELETE) operations are fast.
-The given data set has data for 20 users. Consider these operations are happening for  ~ 1 million users.
-    
+- Task 1:  
+Make a system where we can easily store data using the columns mentioned in the
+Excel. Make Sure (GET, POST, PUT, DELETE) operations are fast. The given data set has data for 20 users. Consider these operations are happening for  ~ 1 million users.
 Give us particular api points which can be used to (GET, POST, PUT, DELETE) data from the system.
       
 
-Task 2:
-Design the system in such a way that using the parameters mentioned below  -> (wallet_balance,number_of_deposits, depositted_users)
-& with some specific operators ( “AND”, “OR”, “>”, “<”, “=” ).
+- Task 2:
+Design the system in such a way that using the parameters mentioned below  -> (wallet_balance,number_of_deposits, depositted_users) & with some specific operators ( “AND”, “OR”, “>”, “<”, “=” ).
 I can make any number /type dynamic queries with provided parameters and operators
 
-CONDITION CAN BE LIKE - 
-Deposited users  and whose wallet balance is greater than 30
-Users who have not deposited but have wallet_balance > certain amount.
-ETC….
+ - CONDITION CAN BE LIKE - 
+   - Deposited users and whose wallet balance is greater than 30
+   - Users who have not deposited but have wallet_balance > certain amount.
+   - ETC….
 
-Note: Request can not contain anything other than the operators and parameters.
-You can use the operators and parameters in any order. Your api should automatically work if new operators and params are added
-
+Note: Request can not contain anything other than the operators and parameters. You can use the operators and parameters in any order. Your api should automatically work if new operators and params are added
 
 
-HINT: 
- Input should contain one user_id and the query
+
+HINT: Input should contain one user_id and the query
 Expected output: 
 true/false(boolean)
 
