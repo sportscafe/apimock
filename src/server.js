@@ -10,7 +10,12 @@ const server = Hapi.server({
 });
 
 // Add the route
-server.route(routes);
+// server.route(routes);  //Getting Assertion Error, It accepts object as value, but here passing array 'routes'.
+routes.forEach(el => {
+    el.forEach(obj => {
+        server.route(obj);
+    });
+});
 
 // Start the server
 async function start() {
