@@ -9,20 +9,24 @@ let adder = (sum, element) => {
   return p;
 }
 
-export let loop = (request, h) => {
-  let numbers = [1,2,3,4,5,6,7,8,9,10];
-  let sum = 0;
-  
-  numbers.forEach(n => {
-    console.log(`Trying to add ${n}`);
-  	adder(sum, n)
-  		.then(res => {
-        console.log(`Current sum is ${n}`);
-        sum = res
-      });
-  });
-  
-  return sum;
+export let loop = async (request, h) => {
+  try {
+    let numbers = [1,2,3,4,5,6,7,8,9,10];
+    let sum = 0;
+    
+    for (let n = 1; n <= numbers.length; n++) {
+      console.log(`Trying to add ${n}`);
+
+      var res = await adder(sum, n);
+      console.log(`Current sum is ${res}`);
+      sum = res;
+    }
+    
+    return sum;
+  }
+  catch (err) {
+    console.error(err);
+  }
 };
 
 export let csvToJSON = async (request) => {
