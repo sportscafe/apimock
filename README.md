@@ -159,7 +159,7 @@ Also a brief explanation of how the api will behave based on your implementation
     number_of_deposits
     depositted_users
 
-   You have an excel sheet attached with the question where the values of the params are given with user ids. 
+   You have an excel sheet attached with the repo (Prob6-Data.csv) where the values of the params are given with user ids. 
 
    NOTE : The excel has limited records. While completing the tasks, consider it is being used by millions of users. Try   making it as scalable, dynamic, optimized as possible. 
 
